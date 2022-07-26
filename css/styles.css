@@ -17,6 +17,7 @@ html {
   box-sizing: inherit;
 }
 body {
+  margin: 0;
   font-family: var(--main-font);
   color: var(--main-text-color);
   background-color: var(--main-background-color);
@@ -24,6 +25,11 @@ body {
 a {
   text-decoration: none;
 }
+/* conteiner */
+.conteiner {
+  margin: 0 auto;
+}
+
 /* site nav */
 .site-nav-link {
   font-family: var(--main-font);
@@ -72,6 +78,8 @@ a {
   text-decoration: none;
 }
 .list {
+  padding: 0;
+  margin: 0;
   list-style: none;
 }
 .contacts-link:hover,
@@ -81,6 +89,7 @@ a {
 /* main */
 .main-hero {
   background-color: var(--dark-background-color);
+  text-align: center;
 }
 .visually-hidden {
   position: absolute;
@@ -95,6 +104,8 @@ a {
   margin: -1px;
 }
 .main-title {
+  margin-top: 0;
+  margin-bottom: 30px;
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
@@ -106,20 +117,22 @@ a {
 }
 /* Button */
 .button {
+  border-radius: 4px;
+  padding: 10px 32px;
+  margin-right: auto;
+  margin-left: auto;
+  min-width: 200px;
+  text-align: center;
   font-family: var(--main-font);
   font-family: inherit;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.88;
-  display: flex;
+  display: inline-block;
   letter-spacing: 0.06em;
   color: #ffffff;
   background-color: var(--accent-color);
   cursor: pointer;
-  display: inline-block;
-  padding: 2px 40px;
-  border: 2px solid #ffffff;
-  border-radius: 3px;
 }
 /* Features section*/
 .title-list {
@@ -208,4 +221,11 @@ a {
   line-height: 1.88;
   letter-spacing: 0.03em;
   color: var(--secondary-text-color);
+}
+.conteiner {
+  width: 1200px;
+  margin: 0 auto;
+  background-color: pink;
+  padding-left: 15px;
+  padding-right: 15px;
 }
