@@ -18,7 +18,7 @@ a {
   text-decoration: none;
 }
 /* site nav */
-.site-nav .link {
+.site-nav-link {
   font-family: var(--main-font);
   font-weight: 500;
   font-size: 14px;
@@ -27,11 +27,11 @@ a {
   color: var(--main-text-color);
 }
 
-.site-nav .link:hover,
-.site-nav .link:focus {
+.site-nav-link:hover,
+.site-nav-link:focus {
   color: var(--accent-color);
 }
-.site-nav .link.current {
+.site-nav-link .current {
   color: var(--accent-color);
 }
 /* logo */
@@ -52,7 +52,7 @@ a {
 }
 
 /* Contacts */
-.contacts .link {
+.contacts-link {
   font-family: var(--main-font);
   font-weight: 500;
   font-size: 14px;
