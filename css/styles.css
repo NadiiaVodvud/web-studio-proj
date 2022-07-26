@@ -8,7 +8,14 @@
   --secondary-background-color: #eeeeee;
   --dark-background-color: #2f303a;
 }
-
+html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
 body {
   font-family: var(--main-font);
   color: var(--main-text-color);
@@ -61,14 +68,14 @@ a {
   color: var(--secondary-text-color);
 }
 
-.link {
+.contacts-link {
   text-decoration: none;
 }
 .list {
   list-style: none;
 }
-.link:hover,
-.link:focus {
+.contacts-link:hover,
+.contacts-link:focus {
   color: var(--accent-color);
 }
 /* main */
@@ -109,6 +116,10 @@ a {
   color: #ffffff;
   background-color: var(--accent-color);
   cursor: pointer;
+  display: inline-block;
+  padding: 2px 40px;
+  border: 2px solid #ffffff;
+  border-radius: 3px;
 }
 /* Features section*/
 .title-list {
