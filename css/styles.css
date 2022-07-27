@@ -25,9 +25,22 @@ body {
 a {
   text-decoration: none;
 }
+h1,
+h2,
+h3,
+h4,
+p {
+  padding-top: 0;
+  padding-bottom: 0;
+}
 /* conteiner */
 .conteiner {
+  width: 1200px;
   margin: 0 auto;
+  background-color: pink;
+  padding-left: 15px;
+  padding-right: 15px;
+  outline: greenyellow;
 }
 
 /* site nav */
@@ -66,6 +79,7 @@ a {
 
 /* Contacts */
 .contacts-link {
+  padding-bottom: 32px;
   font-family: var(--main-font);
   font-weight: 500;
   font-size: 14px;
@@ -88,6 +102,7 @@ a {
 }
 /* main */
 .main-hero {
+  padding: 94px;
   background-color: var(--dark-background-color);
   text-align: center;
 }
@@ -135,7 +150,18 @@ a {
   cursor: pointer;
 }
 /* Features section*/
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+.section-no-top-padding {
+  padding-top: 0;
+}
+
 .title-list {
+  padding-bottom: 50px;
+  margin-top: 0;
+  margin-bottom: 0;
   font-weight: 700;
   font-size: 36px;
   line-height: 1.17;
@@ -143,6 +169,8 @@ a {
   letter-spacing: 0.03em;
 }
 .feautures-title {
+  margin-top: 0;
+  margin-bottom: 10;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
@@ -151,6 +179,8 @@ a {
 }
 
 .features-description {
+  margin-top: 0;
+  margin-bottom: 0;
   color: var(--secondary-text-color);
 }
 .features-description,
@@ -161,7 +191,7 @@ a {
   letter-spacing: 0.03em;
 }
 /* Team section */
-.team-section {
+.section-team {
   background-color: var(--secondary-background-color);
 }
 .team {
@@ -221,11 +251,4 @@ a {
   line-height: 1.88;
   letter-spacing: 0.03em;
   color: var(--secondary-text-color);
-}
-.conteiner {
-  width: 1200px;
-  margin: 0 auto;
-  background-color: pink;
-  padding-left: 15px;
-  padding-right: 15px;
 }
