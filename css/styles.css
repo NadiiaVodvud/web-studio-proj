@@ -29,9 +29,19 @@ h1,
 h2,
 h3,
 h4,
+h5,
 p {
   padding-top: 0;
   padding-bottom: 0;
+}
+ul {
+  margin: 0;
+  padding: 0;
+}
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 .list {
   padding: 0;
@@ -40,13 +50,12 @@ p {
 }
 
 /* conteiner */
-.conteiner {
+.container {
   width: 1200px;
   margin: 0 auto;
   padding-left: 15px;
   padding-right: 15px;
-
-  border-color: darkblue;
+  outline: 2px solid black;
 }
 
 /* site nav */
@@ -68,8 +77,8 @@ p {
 
 .site-nav-link {
   display: block;
-  padding-top: 32px;
-  padding-bottom: 32px;
+  padding-top: 24px;
+  padding-bottom: 25px;
   font-family: var(--main-font);
   font-weight: 500;
   font-size: 14px;
@@ -194,11 +203,7 @@ p {
   width: 270px;
   background-color: coral;
 }
-/* img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-} */
+
 .title-list {
   padding-bottom: 50px;
   margin-top: 0;
@@ -256,6 +261,13 @@ p {
   letter-spacing: 0.03em;
   color: var(--secondary-text-color);
 }
+.data-team {
+  outline: 1px solid rgba(75, 75, 75, 0.1);
+  border-radius: 4px;
+  height: 108px;
+  width: 270px;
+  text-align: center;
+}
 /* Footer section*/
 .footer-site {
   background-color: var(--dark-background-color);
@@ -274,6 +286,8 @@ p {
 
 /* Page Portfolio special*/
 .buttons {
+  display: inline-flex;
+  margin-left: 8px;
   border-radius: 4px;
   padding: 6px 22px;
   font-family: var(--main-font);
@@ -285,6 +299,7 @@ p {
   letter-spacing: 0.03em;
   cursor: pointer;
 }
+
 .buttons:hover,
 .buttons:focus {
   color: #ffffff;
@@ -296,7 +311,7 @@ p {
 .progects {
   display: flex;
   flex-wrap: wrap;
-  background-color: rgb(96, 117, 117);
+  background-color: rgb(180, 215, 215);
 }
 .progects .elements {
   width: 370px;
