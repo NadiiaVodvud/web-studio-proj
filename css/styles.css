@@ -24,6 +24,8 @@ body {
 }
 a {
   text-decoration: none;
+  margin: 0;
+  padding: 0;
 }
 h1,
 h2,
@@ -55,21 +57,22 @@ img {
   margin: 0 auto;
   padding-left: 15px;
   padding-right: 15px;
-  outline: 2px solid black;
+  /* outline: 2px solid black; */
 }
 
 /* site nav */
-.navigation {
+/* todo біда з лого, підкажіть будь ласк що роблю не так (невбиваємий марджин перекидує все інше в інший рядок)*/
+
+.page-header .container {
   display: flex;
   align-items: center;
 }
 .site-nav {
   display: flex;
-  margin-left: 93px;
 }
 .site-nav .item {
   margin-right: 50px;
-  background-color: burlywood;
+  /* background-color: burlywood; */
 }
 .site-nav .item:last-child {
   margin-right: 0;
@@ -96,6 +99,9 @@ img {
 }
 /* logo */
 .logo {
+  display: flex;
+  margin-right: 93px;
+  max-width: 145px;
   font-family: var(--secondary-font);
   font-style: normal;
   font-weight: 700;
@@ -201,9 +207,12 @@ img {
 }
 .features.list .item {
   width: 270px;
-  background-color: coral;
+  /* background-color: coral; */
+  margin-right: 30px;
 }
-
+.features.list .item:last-child {
+  margin-right: 0;
+}
 .title-list {
   padding-bottom: 50px;
   margin-top: 0;
@@ -236,10 +245,27 @@ img {
   line-height: 1.71;
   letter-spacing: 0.03em;
 }
+/* Whot  they do */
+.work.list {
+  display: flex;
+}
+.performance:not(:last-child) {
+  margin-right: 30px;
+}
+
 /* Team section */
 .section.team {
+  padding-top: 94px;
+  padding-bottom: 94px;
   background-color: var(--secondary-background-color);
 }
+.team.list {
+  display: flex;
+}
+.team-item:not(:last-child) {
+  margin-right: 30px;
+}
+
 .team {
   padding-top: 30px;
   padding-bottom: 10px;
@@ -280,13 +306,21 @@ img {
 .address {
   color: #ffffff;
 }
+.address.list {
+  padding-top: 20px;
+  padding-bottom: 60px;
+}
 .footer-contacts {
   color: rgba(255, 255, 255, 0.6);
 }
 
 /* Page Portfolio special*/
+.list.buttons {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 50px;
+}
 .buttons {
-  display: inline-flex;
   margin-left: 8px;
   border-radius: 4px;
   padding: 6px 22px;
@@ -305,13 +339,11 @@ img {
   color: #ffffff;
   background-color: var(--accent-color);
 }
-.list.buttons {
-  padding-bottom: 50px;
-}
-.progects {
+/* Projects */
+.progects.list {
   display: flex;
   flex-wrap: wrap;
-  background-color: rgb(180, 215, 215);
+  /* background-color: rgb(180, 215, 215); */
 }
 .progects .elements {
   width: 370px;
