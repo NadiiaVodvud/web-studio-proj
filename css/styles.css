@@ -5,7 +5,7 @@
   --main-font: 'Roboto', sans-serif;
   --secondary-font: 'Raleway', sans-serif;
   --main-background-color: #ffffff;
-  --secondary-background-color: #eeeeee;
+  --secondary-background-color: #f5f4fa;
   --dark-background-color: #2f303a;
 }
 html {
@@ -35,6 +35,8 @@ h5,
 p {
   padding-top: 0;
   padding-bottom: 0;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 ul {
   margin: 0;
@@ -61,27 +63,32 @@ img {
 }
 
 /* site nav */
-/* todo біда з лого, підкажіть будь ласк що роблю не так (невбиваємий марджин перекидує все інше в інший рядок)*/
-
-.page-header .container {
-  display: flex;
-  align-items: center;
-  outline: 1px solid rgba(75, 75, 75, 0.1);
+.page-header {
+  border: 1px solid rgba(75, 75, 75, 0.1);
   border-radius: 4px;
 }
-.site-nav {
+.header-box {
   display: flex;
+  align-items: center;
+  flex-direction: nowrap;
+}
+.navigation {
+  display: flex;
+}
+.site-nav.list {
+  display: flex;
+  align-items: center;
+  margin-left: 93px;
 }
 .site-nav .item {
   margin-right: 50px;
-  /* background-color: burlywood; */
 }
 .site-nav .item:last-child {
   margin-right: 0;
 }
 
 .site-nav-link {
-  display: block;
+  display: flex;
   padding-top: 24px;
   padding-bottom: 25px;
   font-family: var(--main-font);
@@ -101,9 +108,6 @@ img {
 }
 /* logo */
 .logo {
-  display: flex;
-  margin-right: 93px;
-  max-width: 145px;
   font-family: var(--secondary-font);
   font-style: normal;
   font-weight: 700;
@@ -129,7 +133,7 @@ img {
 }
 
 .contacts-link {
-  padding-bottom: 32px;
+  padding-bottom: 32px 0;
   font-family: var(--main-font);
   font-weight: 500;
   font-size: 14px;
@@ -148,7 +152,7 @@ img {
 }
 /* main */
 .main-hero {
-  padding: 94px;
+  padding: 200px 0;
   background-color: var(--dark-background-color);
   text-align: center;
 }
@@ -209,16 +213,13 @@ img {
 }
 .features.list .item {
   width: 270px;
-  /* background-color: coral; */
   margin-right: 30px;
 }
 .features.list .item:last-child {
   margin-right: 0;
 }
 .title-list {
-  padding-bottom: 50px;
-  margin-top: 0;
-  margin-bottom: 0;
+  margin: 0 0 50px 0;
   font-weight: 700;
   font-size: 36px;
   line-height: 1.17;
@@ -263,16 +264,15 @@ img {
 }
 .team.list {
   display: flex;
+  padding: 0;
 }
 .team-item:not(:last-child) {
   margin-right: 30px;
 }
 
-.team {
-  padding-top: 30px;
-  padding-bottom: 10px;
-  margin-top: 0;
-  margin-bottom: 0;
+.team-names {
+  margin-top: 30px;
+  margin-bottom: 10px;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.19;
@@ -280,9 +280,9 @@ img {
   letter-spacing: 0.03em;
 }
 .team-position {
-  padding-bottom: 30px;
   margin-top: 0;
-  margin-bottom: 0;
+  margin-bottom: 30px;
+  font-weight: 400;
   font-size: 16px;
   line-height: 1.19;
   text-align: center;
@@ -292,12 +292,14 @@ img {
 .data-team {
   outline: 1px solid rgba(75, 75, 75, 0.1);
   border-radius: 4px;
-  height: 108px;
+  height: 368px;
   width: 270px;
   text-align: center;
 }
 /* Footer section*/
 .footer-site {
+  padding-top: 60px;
+  padding-bottom: 60px;
   background-color: var(--dark-background-color);
 }
 .address,
@@ -305,24 +307,35 @@ img {
   font-style: normal;
   text-decoration: none;
 }
-.address {
+.address-map {
   color: #ffffff;
 }
 .address.list {
-  padding-top: 20px;
-  padding-bottom: 60px;
+  margin-top: 20px;
 }
 .footer-contacts {
+  margin-top: 9px;
   color: rgba(255, 255, 255, 0.6);
 }
-
 /* Page Portfolio special*/
 .list.buttons {
   display: flex;
   justify-content: center;
   padding-bottom: 50px;
 }
+.buttons-group {
+  display: flex;
+  justify-content: center;
+  flex-direction: nowrap;
+  margin-bottom: 50px;
+}
+.buttons-group:not(:last-child) {
+  margin-right: 8px;
+}
+
 .buttons {
+  min-width: 29px;
+  min-height: 26px;
   margin-left: 8px;
   border-radius: 4px;
   padding: 6px 22px;
@@ -345,7 +358,6 @@ img {
 .progects.list {
   display: flex;
   flex-wrap: wrap;
-  /* background-color: rgb(180, 215, 215); */
 }
 .progects .elements {
   width: 370px;
@@ -358,19 +370,20 @@ img {
 .progects .elements:nth-last-child(-n + 3) {
   margin-bottom: 0;
 }
-
+.solution {
+  width: 370px;
+  padding: 20px 24px;
+  border: 1px solid #eeeeee;
+}
 .projects-title {
-  padding-top: 20px;
-  padding-bottom: 4px;
+  margin-bottom: 4px;
   margin-top: 0;
-  margin-bottom: 0;
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
 }
 .progects-description {
-  padding-bottom: 20px;
   margin-top: 0;
   margin-bottom: 0;
   font-size: 16px;
