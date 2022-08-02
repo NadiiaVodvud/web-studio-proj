@@ -59,7 +59,6 @@ img {
   margin: 0 auto;
   padding-left: 15px;
   padding-right: 15px;
-  /* outline: 2px solid black; */
 }
 
 /* site nav */
@@ -150,8 +149,37 @@ img {
 .contacts-link:focus {
   color: var(--accent-color);
 }
+.mail-icon {
+  max-width: 16px;
+  max-height: 12px;
+  margin-right: 10px;
+}
+.mail-icon:hover,
+.mail-icon:focus {
+  color: var(--accent-color);
+}
+.phone-icon {
+  max-width: 10px;
+  max-height: 16px;
+  margin-right: 10px;
+  fill= #757575;
+}
+.phone-icon:hover,
+.phone-icon:focus {
+  fill: var(--accent-color);
+}
 /* main */
 .main-hero {
+  display: inline-block;
+  width: 1600px;
+  height: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4));
+  background-image: url(../images/Header.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   padding: 200px 0;
   background-color: var(--dark-background-color);
   text-align: center;
@@ -226,6 +254,10 @@ img {
   text-align: center;
   letter-spacing: 0.03em;
 }
+.feautures-icon{
+  width: 70px;
+  height: 70px;
+}
 .feautures-title {
   margin-top: 0;
   margin-bottom: 10;
@@ -296,6 +328,26 @@ img {
   width: 270px;
   text-align: center;
 }
+.social-networks{
+  display: inline-flex;
+  flex-wrap: nowrap;
+  width: 206px;
+  height: 44px;
+}
+.networks-icon{
+  width: 20px;
+  height: 20px;
+}
+/* Customers */
+.customers-title {
+  margin-bottom: 50px;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+
 /* Footer section*/
 .footer-site {
   padding-top: 60px;
