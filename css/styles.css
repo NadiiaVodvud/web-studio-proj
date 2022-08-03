@@ -131,7 +131,8 @@ img {
   margin-left: 50px;
 }
 
-.contacts-link {
+.contacts-mail-link,
+.contacts-phone-link {
   padding-bottom: 32px 0;
   font-family: var(--main-font);
   font-weight: 500;
@@ -141,28 +142,31 @@ img {
   color: var(--secondary-text-color);
 }
 
-.contacts-link {
+.contacts-mail-link,
+.contacts-phone-link {
   text-decoration: none;
 }
 
-.contacts-link:hover,
-.contacts-link:focus {
+.contacts-mail-link:hover,
+.contacts-mail-link:focus {
+  color: var(--accent-color);
+}
+.contacts-phone-link:hover,
+.contacts-phone-link:focus {
   color: var(--accent-color);
 }
 .mail-icon {
-  max-width: 16px;
-  max-height: 12px;
   margin-right: 10px;
+  fill: #757575;
 }
 .mail-icon:hover,
 .mail-icon:focus {
-  color: var(--accent-color);
+  fill: var(--accent-color);
 }
+
 .phone-icon {
-  max-width: 10px;
-  max-height: 16px;
   margin-right: 10px;
-  fill= #757575;
+  fill: #757575;
 }
 .phone-icon:hover,
 .phone-icon:focus {
@@ -170,18 +174,17 @@ img {
 }
 /* main */
 .main-hero {
-  display: inline-block;
-  width: 1600px;
+  display: flex;
+  max-width: 1600px;
   height: 600px;
-  margin-left: auto;
-  margin-right: auto;
-  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4));
-  background-image: url(../images/Header.jpg);
+  background-color: var(--dark-background-color);
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url(../images/Header.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  margin: 0 auto;
   padding: 200px 0;
-  background-color: var(--dark-background-color);
   text-align: center;
 }
 .visually-hidden {
@@ -254,9 +257,15 @@ img {
   text-align: center;
   letter-spacing: 0.03em;
 }
-.feautures-icon{
-  width: 70px;
-  height: 70px;
+.bg-icon {
+  display: flex;
+  width: 270px;
+  height: 120px;
+  justify-content: center;
+  align-items: center;
+  background-color: #f5f4fa;
+  border-radius: 4px;
+  margin-bottom: 30px;
 }
 .feautures-title {
   margin-top: 0;
@@ -313,7 +322,7 @@ img {
 }
 .team-position {
   margin-top: 0;
-  margin-bottom: 30px;
+  margin-bottom: 16px;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.19;
@@ -324,20 +333,45 @@ img {
 .data-team {
   outline: 1px solid rgba(75, 75, 75, 0.1);
   border-radius: 4px;
-  height: 368px;
+  height: 428px;
   width: 270px;
   text-align: center;
+  background-color: #ffffff;
 }
-.social-networks{
-  display: inline-flex;
-  flex-wrap: nowrap;
+/* icons */
+.social-networks {
   width: 206px;
   height: 44px;
 }
-.networks-icon{
-  width: 20px;
-  height: 20px;
+.soc {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 30px;
 }
+.soc-link {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.soc-link:hover,
+.soc-link:focus {
+  background-color: var(--accent-color);
+}
+
+.soc-icon {
+  fill: #afb1b8;
+}
+.soc-link:hover .soc-icon,
+.soc-link:focus .soc-icon {
+  fill: #ffffff;
+}
+
 /* Customers */
 .customers-title {
   margin-bottom: 50px;
@@ -346,6 +380,32 @@ img {
   line-height: 1.17;
   text-align: center;
   letter-spacing: 0.03em;
+}
+.customers-list {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+.customers-link {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  width: 170px;
+  height: 92px;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+  color: #afb1b8;
+}
+.customers-icon {
+  fill: currentColor;
+}
+.customers-link:hover,
+.customers-link:focus {
+  border: 1px solid var(--accent-color);
+  color: var(--accent-color);
 }
 
 /* Footer section*/
@@ -360,6 +420,7 @@ img {
   text-decoration: none;
 }
 .address-map {
+  margin-top: 20px;
   color: #ffffff;
 }
 .address.list {
@@ -368,6 +429,9 @@ img {
 .footer-contacts {
   margin-top: 9px;
   color: rgba(255, 255, 255, 0.6);
+}
+/* Join */
+.join-title {
 }
 /* Page Portfolio special*/
 .list.buttons {
@@ -388,7 +452,6 @@ img {
 .buttons {
   min-width: 29px;
   min-height: 26px;
-  margin-left: 8px;
   border-radius: 4px;
   padding: 6px 22px;
   font-family: var(--main-font);
@@ -400,7 +463,9 @@ img {
   letter-spacing: 0.03em;
   cursor: pointer;
 }
-
+.buttons-item:not(:last-child) {
+  margin-right: 8px;
+}
 .buttons:hover,
 .buttons:focus {
   color: #ffffff;
