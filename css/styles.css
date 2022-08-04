@@ -94,7 +94,7 @@ img {
 .site-nav-link:focus {
   color: var(--accent-color);
 }
-.site-nav-link .current {
+.site-nav-link.current {
   color: var(--accent-color);
 }
 /* logo */
@@ -126,6 +126,8 @@ img {
 
 .contacts-mail-link,
 .contacts-phone-link {
+  display: flex;
+  align-items: center;
   padding-bottom: 32px 0;
   font-family: var(--main-font);
   font-weight: 500;
@@ -139,7 +141,6 @@ img {
 .contacts-phone-link {
   text-decoration: none;
 }
-
 .contacts-mail-link:hover,
 .contacts-mail-link:focus {
   color: var(--accent-color);
@@ -152,22 +153,17 @@ img {
   margin-right: 10px;
   fill: #757575;
 }
-.mail-icon:hover,
-.mail-icon:focus {
-  fill: var(--accent-color);
-}
 
 .phone-icon {
   margin-right: 10px;
   fill: #757575;
 }
-.phone-icon:hover,
-.phone-icon:focus {
-  fill: var(--accent-color);
+.mail-icon,
+.phone-icon {
+  fill: currentColor;
 }
 /* main */
 .main-hero {
-  display: flex;
   max-width: 1600px;
   height: 600px;
   background-color: var(--dark-background-color);
@@ -319,7 +315,7 @@ img {
 }
 .team-position {
   margin-top: 0;
-  padding-bottom: 16px;
+  margin-bottom: 16px;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.19;
@@ -425,12 +421,8 @@ img {
   color: rgba(255, 255, 255, 0.6);
 }
 /* Join */
-.join {
-  display: flex;
-  flex-direction: column;
-  width: 206px;
-  height: 80px;
-  margin-top: 20px;
+.footer-wrap {
+  align-items: baseline;
 }
 .join-title {
   margin-bottom: 20px;
@@ -482,8 +474,7 @@ img {
 }
 
 .buttons {
-  min-width: 29px;
-  min-height: 26px;
+  border: transparent;
   border-radius: 4px;
   padding: 6px 22px;
   font-family: var(--main-font);
@@ -494,6 +485,7 @@ img {
   text-align: center;
   letter-spacing: 0.03em;
   cursor: pointer;
+  background-color: var(--secondary-background-color);
 }
 .buttons-item:not(:last-child) {
   margin-right: 8px;
@@ -521,7 +513,10 @@ img {
 .progects .elements:nth-last-child(-n + 3) {
   margin-bottom: 0;
 }
-.elements:hover {
+.progects-link {
+  display: block;
+}
+.progects-link:hover {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
@@ -530,7 +525,6 @@ img {
   background: #ffffff;
   border: 1px solid #eeeeee;
 }
-
 .projects-title {
   margin-bottom: 4px;
   margin-top: 0;
