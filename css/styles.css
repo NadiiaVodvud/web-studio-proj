@@ -526,6 +526,7 @@ img {
   border: 1px solid #eeeeee;
 }
 .projects-title {
+  color: var(--main-text-color);
   margin-bottom: 4px;
   margin-top: 0;
   font-weight: 700;
