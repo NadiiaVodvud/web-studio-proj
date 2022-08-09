@@ -57,7 +57,7 @@
             Ефективні рішення для <br />
             вашого бізнесу
           </h1>
-          <button type="button" class="button">Замовити послугу</button>
+          <button type="button" class="button" data-modal-open>Замовити послугу</button>
         </div>
       </section>
       <!-- Features -->
@@ -396,6 +396,14 @@
           </ul>
         </div>
       </div>
+      <div class="backdrop is-hidden" data-modal>
+        <div class="modal">
+          <button class="close-button" data-modal-close>
+            <svg class="close" width="11" height="11"><use href="./images/close-black"></use></svg>
+          </button>
+        </div>
+      </div>
+      <script src="./js/modal.js"></script>
     </footer>
   </body>
 </html>
