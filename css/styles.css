@@ -284,6 +284,30 @@ img {
   background: #ffffff;
   cursor: pointer;
 }
+/* ---------form-------- */
+.form {
+  display: flex;
+}
+.form-title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  letter-spacing: 0.03em;
+  color: var(--main-text-color);
+}
+.form-fild {
+  width: 448px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+}
+.form-fild label {
+  margin-bottom: 4px;
+}
+.form-fild input {
+  margin: 0;
+  padding: 0;
+}
 
 /* Features section*/
 .section {
@@ -517,13 +541,15 @@ img {
 .footer-wrap {
   align-items: baseline;
 }
-.join-title {
+.join-title,
+.mailing-title {
   margin-bottom: 20px;
   color: #ffffff;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.03em;
+  text-transform: uppercase;
 }
 .join-soc {
   display: flex;
@@ -550,7 +576,27 @@ img {
 .join-soc-link:focus {
   background-color: var(--accent-color);
 }
-
+.mailing {
+  margin-left: 93px;
+}
+.mailing input[:placeholder] {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6);
+  margin-right: 12px;
+}
+.button.mail {
+  display: inline-block;
+  align-items: center;
+  justify-content: center;
+  padding-left: 28px;
+  padding-right: 28px;
+}
+.mailing-icon {
+  margin-left: 10px;
+}
 /* ________________Page Portfolio special_______________*/
 .list.buttons {
   display: flex;
@@ -675,18 +721,4 @@ img {
   line-height: 1.88;
   letter-spacing: 0.03em;
   color: var(--secondary-text-color);
-}
-/* ---------form-------- */
-.form-fild {
-  width: 448px;
-  display: flex;
-  flex-direction: column;
-  margin-top: 10px;
-}
-.form-fild label {
-  margin-bottom: 4px;
-}
-.form-fild input {
-  margin: 0;
-  padding: 0;
 }
