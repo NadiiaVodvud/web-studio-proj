@@ -676,3 +676,17 @@ img {
   letter-spacing: 0.03em;
   color: var(--secondary-text-color);
 }
+/* ---------form-------- */
+.form-fild {
+  width: 448px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+}
+.form-fild label {
+  margin-bottom: 4px;
+}
+.form-fild input {
+  margin: 0;
+  padding: 0;
+}
