@@ -585,6 +585,8 @@ img {
   background-color: var(--accent-color);
 }
 .mailing {
+  width: 570px;
+  height: 86px;
   margin-left: 93px;
 }
 .mailing input[:placeholder] {
@@ -593,14 +595,25 @@ img {
   line-height: 1.25;
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
-  margin-right: 12px;
 }
+.mailing-address {
+  width: 352px;
+  height: 50px;
+  padding-left: 16px;
+  color: #ffffff;
+  background-color: var(--dark-background-color);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+}
+
 .button.mail {
   display: inline-block;
   align-items: center;
   justify-content: center;
   padding-left: 28px;
   padding-right: 28px;
+  margin-left: 12px;
 }
 .mailing-icon {
   margin-left: 10px;
