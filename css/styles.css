@@ -295,7 +295,6 @@ img {
   text-align: center;
 }
 .form-field {
-  position: relative;
   width: 100%;
   height: 58px;
   margin-bottom: 10px;
@@ -310,12 +309,13 @@ img {
   font-weight: 400;
   font-size: 16px;
 }
-.form-input:focus {
-  border-color: #2196f3;
-  border-radius: 4px;
+.form-input:focus, .modal-comment:focus{
+  outline-color: #2196f3;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1); */
 }
-
+.input-wrap{
+  position: relative;
+}
 .input-title {
   font-weight: 400;
   font-size: 12px;
@@ -327,6 +327,7 @@ img {
 .modal-comment {
   width: 100%;
   height: 120px;
+  margin-bottom: 20px;
   border-radius: 4px;
   padding-left: 12px;
   font-weight: 400;
@@ -336,15 +337,15 @@ img {
 }
 .modal-icon {
   position: absolute;
-  top: 57%;
+  top: 50%;
   left: 12px;
+  transform: translateY(-50%);
 }
 
 .form-input:focus + .modal-icon {
   fill: var(--accent-color);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1); */
 }
-
 
 .policy-text{
   font-weight: 400;
@@ -353,14 +354,53 @@ img {
   letter-spacing: 0.03em;
   color: #757575;
 }
+.checkbox-field{
+  margin-bottom: 30px;
+  align-self: center;
+}
+ .check-text{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 15px;
+  border: 2px solid #212121;
+  border-radius: 3px;
+  margin-right: 7px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),  border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+ }
+
+.check-icon{
+  display: inline-block;
+  fill: transparent;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.input-check:checked +span .check-icon{
+  background-color: var(--accent-color);
+  background-size: contain;
+  background-origin: border-box;
+  background-position: center;
+  border-color: var(--accent-color);
+    fill: #fff;
+}
+
+/
+/* transform: translate(-35%, -50%) scale(1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1); */
+
 .policy-link{
 letter-spacing: 0.03em;
 text-decoration-line: underline;
 color: var(--accent-color);
-
 }
-/* transform: translate(-35%, -50%) scale(1);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1); */
+
+
+.button.modal-btn{
+  display: block;
+  align-items: center;
+  padding: 10px 52px;
+}
 
 /* Features section*/
 .section {
