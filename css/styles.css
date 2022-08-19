@@ -308,6 +308,7 @@ img {
   padding-left: 42px;
   font-weight: 400;
   font-size: 16px;
+  cursor: pointer;
 }
 .form-input:focus, .modal-comment:focus{
   outline-color: #2196f3;
@@ -334,6 +335,7 @@ img {
   font-size: 16px;
   color: #000000;
   resize: none;
+  cursor: pointer;
 }
 .modal-icon {
   position: absolute;
@@ -357,6 +359,7 @@ img {
 .checkbox-field{
   margin-bottom: 30px;
   align-self: center;
+  cursor: pointer;
 }
  .check-text{
   display: inline-flex;
