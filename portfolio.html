@@ -271,16 +271,24 @@
             </li>
           </ul>
         </div>
-        <div class="mailing">
-          <h3 class="mailing-title"=>Підпишіться на розсилку</h3>
-          <input type="email" name="mail" placeholder="E-mail" class="mailing-address"/>
-          <button type="button" class="button mail">
-            Підписатися
-            <svg class="mailing-icon" width="20" height="20">
-              <use href="./images/icons.svg#icon-send"></use>
-            </svg>
-          </button>
-        </div>
+        <form action="" autocomplete="off">
+          <div class="mailing">
+            <label for="subscription" class="mailing-title">Підпишіться на розсилку</label>
+            <input
+              type="email"
+              name="mail"
+              placeholder="E-mail"
+              id="subscription"
+              class="mailing-address"
+            />
+            <button type="button" class="button mail">
+              Підписатися
+              <svg class="mailing-icon" width="20" height="20">
+                <use href="./images/icons.svg#icon-send"></use>
+              </svg>
+            </button>
+          </div>
+        </form>
       </div>
     </footer>
   </body>
