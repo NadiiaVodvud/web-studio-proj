@@ -135,13 +135,11 @@ img {
   display: flex;
   margin-left: auto;
 }
-.contacts__item {
-  margin-left: 50px;
+.contacts__list .contacts__item  + .contacts__item {
+  margin-left: 30px;
 }
-!!!!!!!!!!
 
-.contacts__mail--link,
-.contacts__phone--link {
+.contacts__mail--link , .contacts__phone--link {
   display: flex;
   align-items: center;
   padding-bottom: 32px 0;
@@ -151,12 +149,9 @@ img {
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--secondary-text-color);
-}
-.contacts__mail--link,
-.contacts__phone--link {
-  text-decoration: none;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .contacts__mail--link:hover,
 .contacts__mail--link:focus {
   color: var(--accent-color);
@@ -165,19 +160,11 @@ img {
 .contacts__phone--link:focus {
   color: var(--accent-color);
 }
-.contacts__mail--icon {
+.contacts__mail--icon , .contacts__phone--icon {
   margin-right: 10px;
-  fill: #757575;
-}
-
-.contacts__phone--icon {
-  margin-right: 10px;
-  fill: #757575;
-}
-.contacts__mail--icon,
-.contacts__phone--icon {
   fill: currentColor;
 }
+
 /* main */
 .main__hero {
   max-width: 1600px;
