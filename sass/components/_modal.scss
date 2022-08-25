@@ -70,11 +70,10 @@
   font-weight: 400;
   font-size: 16px;
   cursor: pointer;
-}
-.form__input:focus,
-.modal__comment:focus {
-  outline-color: #2196f3;
-  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:focus {
+    outline-color: #2196f3;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
 }
 
 .input__title {
@@ -102,17 +101,22 @@
   color: #000000;
   resize: none;
   cursor: pointer;
+  &:focus {
+    outline-color: #2196f3;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
 }
 .modal__icon {
   position: absolute;
   top: 50%;
   left: 12px;
   transform: translateY(-50%);
+  .form__input:focus + & {
+    fill: var(--accent-color);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
 }
-.form__input:focus + .modal__icon {
-  fill: var(--accent-color);
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
+
 .checkbox__title {
   display: flex;
   align-items: center;
@@ -136,6 +140,13 @@
   cursor: pointer;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  .input__check:checked + & {
+    background-color: var(--accent-color);
+    background-size: contain;
+    background-origin: border-box;
+    background-position: center;
+    border-color: var(--accent-color);
+  }
 }
 
 .check__icon {
@@ -145,13 +156,6 @@
 }
 .input__check:checked {
   background-color: var(--accent-color);
-}
-.input__check:checked + .check__text {
-  background-color: var(--accent-color);
-  background-size: contain;
-  background-origin: border-box;
-  background-position: center;
-  border-color: var(--accent-color);
 }
 
 .policy__text {

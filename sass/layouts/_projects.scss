@@ -16,18 +16,13 @@
 .progects__link {
   display: block;
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.progects__link:hover,
-.progects__link:focus {
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
-    1px 4px 6px rgba(0, 0, 0, 0.16);
+  &:hover,
+  &:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+      1px 4px 6px rgba(0, 0, 0, 0.16);
+  }
 }
 
-.progects__link:hover .progects__text--wrap,
-.progects__link:focus .progects__text--wrap {
-  transform: translateY(0);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
 .photo__wrap {
   position: relative;
   overflow: hidden;
@@ -44,6 +39,11 @@
   width: 370px;
   height: 294px;
   background: rgba(33, 150, 243, 0.9);
+  .progects__link:hover &,
+  .progects__link:focus & {
+    transform: translateY(0);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
 }
 .progects__text {
   display: flex;
