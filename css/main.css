@@ -76,11 +76,20 @@ img {
   padding-bottom: 94px;
 }
 
-.section__no-top-padding {
+.section__title {
+  margin: 0 0 50px 0;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+
+.section--no-top-padding {
   padding-top: 0;
 }
 
-.section__team {
+.section--team {
   background-color: var(--secondary-background-color);
 }
 
@@ -88,7 +97,7 @@ img {
   border-bottom: 1px solid rgba(75, 75, 75, 0.1);
 }
 
-.container__header-box {
+.container__page-header--box {
   display: flex;
   align-items: center;
   flex-direction: row;
@@ -100,7 +109,7 @@ img {
   align-items: center;
 }
 
-.site-nav__list {
+.site-nav {
   display: flex;
   align-items: center;
   margin-left: 93px;
@@ -145,17 +154,15 @@ img {
   background-color: var(--accent-color);
 }
 
-.contacts__list {
+.contacts {
   display: flex;
   margin-left: auto;
 }
-
-.contacts__list .contacts__item + .contacts__item {
+.contacts .contacts__item + .contacts__item {
   margin-left: 30px;
 }
 
-.contacts__mail--link,
-.contacts__phone--link {
+.contacts__link {
   display: flex;
   align-items: center;
   padding-bottom: 32px 0;
@@ -167,14 +174,11 @@ img {
   color: var(--secondary-text-color);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.contacts__mail--link:hover, .contacts__mail--link:focus,
-.contacts__phone--link:hover,
-.contacts__phone--link:focus {
+.contacts__link:hover, .contacts__link:focus {
   color: var(--accent-color);
 }
 
-.contacts__mail--icon,
-.contacts__phone--icon {
+.contacts__icon {
   margin-right: 10px;
   fill: currentColor;
 }
@@ -198,7 +202,7 @@ img {
   color: #ffffff;
 }
 
-.main__hero {
+.hero {
   max-width: 1600px;
   height: 600px;
   background-color: var(--dark-background-color);
@@ -211,7 +215,7 @@ img {
   text-align: center;
 }
 
-.main__title {
+.hero__title {
   margin-top: 0;
   margin-bottom: 30px;
   font-weight: 900;
@@ -244,13 +248,13 @@ img {
   cursor: pointer;
 }
 
-.buttons__group {
+.buttons--group {
   display: flex;
   flex-wrap: nowrap;
   justify-content: center;
   margin-bottom: 50px;
 }
-.buttons__group:not(:last-child) {
+.buttons--group:not(:last-child) {
   margin-right: 8px;
 }
 
@@ -467,16 +471,15 @@ img {
   padding: 10px 52px;
 }
 
-.features__list {
+.features {
   display: flex;
   flex-wrap: nowrap;
 }
-
-.features__list .features__item {
+.features .features__item {
   width: 270px;
   margin-right: 30px;
 }
-.features__list .features__item:last-child {
+.features .features__item:last-child {
   margin-right: 0;
 }
 
@@ -515,31 +518,21 @@ img {
   letter-spacing: 0.03em;
 }
 
-.works__title,
-.team__title {
-  margin: 0 0 50px 0;
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.17;
-  text-align: center;
-  letter-spacing: 0.03em;
-}
-
-.works__list {
+.works {
   display: flex;
 }
 
-.performance:not(:last-child) {
+.works__item:not(:last-child) {
   margin-right: 30px;
 }
 
-.performance__card {
+.works__link {
   position: relative;
   width: 370px;
   height: 294px;
 }
 
-.card__description {
+.works__description {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -551,7 +544,7 @@ img {
   background: rgba(47, 48, 58, 0.8);
 }
 
-.card__name {
+.works__title {
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
@@ -561,7 +554,7 @@ img {
   color: #ffffff;
 }
 
-.team__list {
+.team {
   display: flex;
 }
 
@@ -578,7 +571,7 @@ img {
   padding: 30px 0;
 }
 
-.team__names {
+.team__title {
   margin-bottom: 10px;
   font-weight: 500;
   font-size: 16px;
@@ -587,7 +580,7 @@ img {
   letter-spacing: 0.03em;
 }
 
-.team__position {
+.team__text {
   margin-top: 0;
   margin-bottom: 16px;
   font-weight: 400;
@@ -627,16 +620,7 @@ img {
   fill: #ffffff;
 }
 
-.customers__title {
-  margin-bottom: 50px;
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.17;
-  text-align: center;
-  letter-spacing: 0.03em;
-}
-
-.customers__list {
+.customers {
   display: flex;
   flex-wrap: nowrap;
   justify-content: center;
@@ -794,12 +778,10 @@ img {
   margin-right: 30px;
   margin-bottom: 30px;
 }
-
-.progects .progects__elements:nth-child(3n) {
+.progects__elements:nth-child(3n) {
   margin-right: 0;
 }
-
-.progects .progects__elements:nth-last-child(-n+3) {
+.progects__elements:nth-last-child(-n+3) {
   margin-bottom: 0;
 }
 

@@ -1,13 +1,12 @@
-.contacts__list {
+.contacts {
   display: flex;
   margin-left: auto;
-}
-.contacts__list .contacts__item + .contacts__item {
-  margin-left: 30px;
+  & .contacts__item + .contacts__item {
+    margin-left: 30px;
+  }
 }
 
-.contacts__mail--link,
-.contacts__phone--link {
+.contacts__link {
   display: flex;
   align-items: center;
   padding-bottom: 32px 0;
@@ -24,8 +23,7 @@
   }
 }
 
-.contacts__mail--icon,
-.contacts__phone--icon {
+.contacts__icon {
   margin-right: 10px;
   fill: currentColor;
 }
