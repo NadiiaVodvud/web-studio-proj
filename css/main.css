@@ -7,6 +7,7 @@
   --main-background-color: #ffffff;
   --secondary-background-color: #f5f4fa;
   --dark-background-color: #2f303a;
+  --gap: 30px;
 }
 
 html {
@@ -18,6 +19,16 @@ body {
   font-family: var(--main-font);
   color: var(--main-text-color);
   background-color: var(--main-background-color);
+}
+
+header,
+footer,
+section {
+  display: none;
+}
+
+.blok {
+  display: block;
 }
 
 a {
@@ -65,13 +76,13 @@ img {
 }
 
 .container {
-  margin: 0 auto;
   padding-left: 15px;
   padding-right: 15px;
 }
 @media screen and (min-width: 480px) {
   .container {
     width: 480px;
+    margin: 0 auto;
   }
 }
 @media screen and (min-width: 768px) {
@@ -79,7 +90,7 @@ img {
     width: 768px;
   }
 }
-@media screen and (min-width: 1140px) {
+@media screen and (min-width: 1200px) {
   .container {
     width: 1200px;
   }
@@ -89,6 +100,18 @@ img {
   padding-top: 94px;
   padding-bottom: 94px;
 }
+.section--no-top-padding {
+  padding-top: 0;
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .section--no-top-padding {
+    display: block;
+  }
+}
+.section--team {
+  background-color: var(--secondary-background-color);
+}
 
 .section__title {
   margin: 0 0 50px 0;
@@ -97,14 +120,6 @@ img {
   line-height: 1.17;
   text-align: center;
   letter-spacing: 0.03em;
-}
-
-.section--no-top-padding {
-  padding-top: 0;
-}
-
-.section--team {
-  background-color: var(--secondary-background-color);
 }
 
 .page-header {
@@ -218,28 +233,41 @@ img {
 
 .hero {
   max-width: 1600px;
-  height: 600px;
+  height: 400px;
+  margin: 0 auto;
+  padding: 118px 0;
   background-color: var(--dark-background-color);
   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/Header.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  margin: 0 auto;
-  padding: 200px 0;
   text-align: center;
+}
+@media screen and (min-width: 1200px) {
+  .hero {
+    width: 1600px;
+    height: 600px;
+    padding: 200px 0;
+  }
 }
 
 .hero__title {
   margin-top: 0;
-  margin-bottom: 30px;
   font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
-  text-align: center;
-  letter-spacing: 0.06em;
+  font-size: 26px;
+  line-height: 1.62;
   text-transform: uppercase;
   color: #ffffff;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  text-align: center;
+  letter-spacing: 0.06em;
+  margin-bottom: 30px;
+}
+@media screen and (min-width: 1200px) {
+  .hero__title {
+    font-size: 44px;
+    line-height: 1.36;
+  }
 }
 
 .button {
@@ -487,25 +515,36 @@ img {
 
 .features {
   display: flex;
-  flex-wrap: nowrap;
+  flex-direction: column;
+  gap: var(--gap);
 }
-.features .features__item {
-  width: 270px;
-  margin-right: 30px;
+@media screen and (min-width: 768px) {
+  .features {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 }
-.features .features__item:last-child {
-  margin-right: 0;
+
+@media screen and (min-width: 768px) {
+  .features__item {
+    flex-basis: calc((100% - 1 * var(--gap)) / 2);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .features__item {
+    flex-basis: calc((100% - 3 * var(--gap)) / 4);
+  }
 }
 
 .features__bacground {
   display: flex;
-  width: 270px;
-  height: 120px;
   justify-content: center;
   align-items: center;
+  width: 100%;
+  height: 120px;
+  margin-bottom: 30px;
   background-color: #f5f4fa;
   border-radius: 4px;
-  margin-bottom: 30px;
 }
 
 .features__title {
@@ -517,14 +556,19 @@ img {
   letter-spacing: 0.03em;
   text-transform: uppercase;
 }
+@media screen and (max-width: 767px) {
+  .features__title {
+    text-align: center;
+  }
+}
 
-.features__text {
+.features__description {
   margin-top: 0;
   margin-bottom: 0;
   color: var(--secondary-text-color);
 }
 
-.features__text,
+.features__description,
 .address__list,
 .footer__contacts {
   font-size: 14px;
@@ -636,19 +680,31 @@ img {
 
 .customers {
   display: flex;
-  flex-wrap: nowrap;
-  justify-content: center;
-  align-items: center;
-  gap: 30px;
+  flex-wrap: wrap;
+  gap: var(--gap);
+}
+
+.customers__item {
+  height: 92px;
+  flex-basis: calc((100% - 1 * var(--gap)) / 2);
+}
+@media screen and (min-width: 768px) {
+  .customers__item {
+    flex-basis: calc((100% - 2 * var(--gap)) / 3);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .customers__item {
+    flex-basis: calc((100% - 5 * var(--gap)) / 6);
+  }
 }
 
 .customers__link {
   display: flex;
-  flex-wrap: nowrap;
   justify-content: center;
   align-items: center;
-  width: 170px;
-  height: 92px;
+  width: 100%;
+  height: 100%;
   border: 1px solid #afb1b8;
   border-radius: 4px;
   color: #afb1b8;

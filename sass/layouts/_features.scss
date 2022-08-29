@@ -1,45 +1,54 @@
 .features {
   display: flex;
-  flex-wrap: nowrap;
-  & .features__item {
-    width: 270px;
-    margin-right: 30px;
-    &:last-child {
-      margin-right: 0;
-    }
+  flex-direction: column;
+  gap: var(--gap);
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+    flex-wrap: wrap;
   }
 }
-//   @media screen and (min-width: 768px) {
-//     display: flex;
-//     flex-basis: 50%;
-//     flex-wrap: wrap;
-//     & .features__item {
-//       width: 270px; width: calc ((100% - 2 * 10px) / 2); margin: 5px;
-//       margin-right: 30px;
-//       &:last-child {
-//         margin-right: 0;
-//       }
+.features__item {
+  @media screen and (min-width: 768px) {
+    flex-basis: calc((100% - 1 * var(--gap)) / 2);
+  }
+  @media screen and (min-width: 1200px) {
+    flex-basis: calc((100% - 3 * var(--gap)) / 4);
+  }
+}
+//
+//   display: flex;
+//   flex-basis: 50%;
+//
+//   & .features__item {
+//     width: 270px;
+//     width:
+//     margin: 5px;
+//     margin-right: 30px;
+//     &:last-child {
+//       margin-right: 0;
 //     }
 //   }
-// @media screen and (max-width: 767px) { до певгої ширини такі стилі
-//  }
-//   @media screen and (min-width: 1140px) {
-//     flex-basis: calc(100% / 3);
-//     display: flex;
-//     flex-wrap: nowrap; width: calc(9100% - 8 * 10px) / 3); margin: 10px;
+// }
+
+// display: flex;
+// flex-wrap: nowrap;
+// & .features__item {
+//   width: 270px;
+//   margin-right: 30px;
+//   &:last-child {
+//     margin-right: 0;
+//   }
 // }
 
 .features__bacground {
-  // @media screen and (min-width: 768px) {
   display: flex;
-  width: 270px;
-  height: 120px;
   justify-content: center;
   align-items: center;
+  width: 100%;
+  height: 120px;
+  margin-bottom: 30px;
   background-color: #f5f4fa;
   border-radius: 4px;
-  margin-bottom: 30px;
-  // }
 }
 .features__title {
   margin-top: 0;
@@ -49,13 +58,16 @@
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
+  @media screen and (max-width: 767px) {
+    text-align: center;
+  }
 }
-.features__text {
+.features__description {
   margin-top: 0;
   margin-bottom: 0;
   color: var(--secondary-text-color);
 }
-.features__text,
+.features__description,
 .address__list,
 .footer__contacts {
   font-size: 14px;
