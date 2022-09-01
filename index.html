@@ -19,23 +19,68 @@
   </head>
 
   <body>
-    <header class="page-header blok">
+    <header class="page-header">
       <div class="container container__page-header--box">
         <nav class="navigation">
           <a class="logo" href="/">Web<span class="logo__black">Studio</span></a>
-          <button
+          <div class="menu">
+            <button
             type="button"
-            class="menu__button is-open"
+            class="menu__button--open js-open-menu"
             aria-expanded="false"
             aria-controls="menu-container"
             data-menu-button
           >
-            <svg width="40" height="40" aria-label="Переключатель мобільного меню">
-              <use class="menu__icon--cross" href="./images/icons.svg#icon-cross"></use>
+            <svg width="40" height="40" aria-label="Кнопка відкриття меню">
               <use class="menu__icon--menu" href="./images/icons.svg#icon-menu"></use>
             </svg>
           </button>
-          <div class="menu__container is-open" id="menu-container" data-menu >Контент меню</div>
+          <div class="menu__container js-menu-container" id="menu-container" data-menu >
+            <button
+              type="button"
+              class="menu__button--close js-close-menu"
+              aria-expanded="true"
+              aria-controls="menu-container"
+              data-menu-button
+            >
+              <svg width="40" height="40" aria-label="Кнопка закриття мобільного меню">
+                <use class="menu__icon--cross" href="./images/icons.svg#icon-cross"></use>
+              </svg>
+            </button>
+            <ul class="menu-nav">
+              <li class="menu-nav__item">
+                <a href="/" class="menu-nav__link menu-nav__link--current">Студія</a>
+              </li>
+              <li class="menu-nav__item">
+                <a href="./portfolio.html" class="menu-nav__link">Портфоліо</a>
+              </li>
+              <li class="menu-nav__item"><a href="" class="menu-nav__link">Контакти</a></li>
+            </ul>
+            <ul class="menu-contacts">
+              <li class="menu-contacts__item">
+                <a href="tel:+380961111111" class="menu-contacts__link--phone">+38 096 111 11 11</a>                
+              </li>
+              <li class="menu-contacts__item">
+                <a href="mailto:info@devstudio.com" class="menu-contacts__link--mail">info@devstudio.com</a>
+              </li>
+            </ul>
+            <ul class="menu-social">
+              <li class="menu-social__items">
+                <a href="#" class="menu-social__link">Instagram</a>
+              </li>
+              <li class="menu-social__items">
+                <a href="#" class="menu-social__link">Twitter</a>
+              </li>
+              <li class="menu-social__items">
+                <a href="#" class="menu-social__link">Facebook</a>
+              </li>
+              <li class="menu-social__items">
+                <a href="#" class="menu-social__link">LinkedIn</a>
+              </li>
+            </ul>
+          </div>
+          </div>
+          <!-- Tablet and desktop -->
           <ul class="site-nav">
             <li class="site-nav__item">
               <a href="/" class="site-nav__link site-nav__link--current">Студія</a>

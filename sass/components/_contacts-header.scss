@@ -1,9 +1,15 @@
 .contacts {
+@media screen and (max-width:767px){
+    display: none;
+  }
+  @media screen and (min-width:768px){
   display: flex;
+    align-items: center;
   margin-left: auto;
   & .contacts__item + .contacts__item {
     margin-left: 30px;
   }
+}
 }
 
 .contacts__link {
@@ -26,7 +32,4 @@
 .contacts__icon {
   margin-right: 10px;
   fill: currentColor;
-}
-.contacts{
-  display: none;
 }
