@@ -103,20 +103,19 @@
   line-height: 1.22;
   letter-spacing: 0.02em;
   color: var(--accent-color);
-  margin-right: 10px;
+  margin-left: 10px;
   @include mobile{
   font-size: 18px;
   }
   &:last-child {
-    margin-right: 0;
+    margin-left: 0;
   }
-  &::after {
-    content: ' ';
-    display: block;
-    width: 22px;
-    height: 1px;
-    margin-right: 10px;
-    background-color: rgba(33, 33, 33, 0.2);
-    transform: rotate(90deg);
-  }
+}
+.menu-social__items:not(:last-child)::after{
+  content: "";
+  display: block;
+  width: 1px;
+  height: 100%;
+  margin-left: 10px;
+  background-color: rgba(33,33,33,.2);
 }
