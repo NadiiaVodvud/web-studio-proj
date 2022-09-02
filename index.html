@@ -23,63 +23,6 @@
       <div class="container container__page-header--box">
         <nav class="navigation">
           <a class="logo" href="/">Web<span class="logo__black">Studio</span></a>
-          <div class="menu">
-            <button
-            type="button"
-            class="menu__button--open js-open-menu"
-            aria-expanded="false"
-            aria-controls="menu-container"
-            data-menu-button
-          >
-            <svg width="40" height="40" aria-label="Кнопка відкриття меню">
-              <use class="menu__icon--menu" href="./images/icons.svg#icon-menu"></use>
-            </svg>
-          </button>
-          <div class="menu__container js-menu-container" id="menu-container" data-menu >
-            <button
-              type="button"
-              class="menu__button--close js-close-menu"
-              aria-expanded="true"
-              aria-controls="menu-container"
-              data-menu-button
-            >
-              <svg width="40" height="40" aria-label="Кнопка закриття мобільного меню">
-                <use class="menu__icon--cross" href="./images/icons.svg#icon-cross"></use>
-              </svg>
-            </button>
-            <ul class="menu-nav">
-              <li class="menu-nav__item">
-                <a href="/" class="menu-nav__link menu-nav__link--current">Студія</a>
-              </li>
-              <li class="menu-nav__item">
-                <a href="./portfolio.html" class="menu-nav__link">Портфоліо</a>
-              </li>
-              <li class="menu-nav__item"><a href="" class="menu-nav__link">Контакти</a></li>
-            </ul>
-            <ul class="menu-contacts">
-              <li class="menu-contacts__item">
-                <a href="tel:+380961111111" class="menu-contacts__link--phone">+38 096 111 11 11</a>                
-              </li>
-              <li class="menu-contacts__item">
-                <a href="mailto:info@devstudio.com" class="menu-contacts__link--mail">info@devstudio.com</a>
-              </li>
-            </ul>
-            <ul class="menu-social">
-              <li class="menu-social__items">
-                <a href="#" class="menu-social__link">Instagram</a>
-              </li>
-              <li class="menu-social__items">
-                <a href="#" class="menu-social__link">Twitter</a>
-              </li>
-              <li class="menu-social__items">
-                <a href="#" class="menu-social__link">Facebook</a>
-              </li>
-              <li class="menu-social__items">
-                <a href="#" class="menu-social__link">LinkedIn</a>
-              </li>
-            </ul>
-          </div>
-          </div>
           <!-- Tablet and desktop -->
           <ul class="site-nav">
             <li class="site-nav__item">
@@ -108,6 +51,71 @@
             >
           </li>
         </ul>
+        <div class="menu">
+          <button
+            type="button"
+            class="menu__button--open js-open-menu"
+            aria-expanded="false"
+            aria-controls="menu-container"
+            data-menu-button
+          >
+            <svg width="40" height="40" aria-label="Кнопка відкриття меню">
+              <use class="menu__icon--menu" href="./images/icons.svg#icon-menu"></use>
+            </svg>
+          </button>
+          <div class="menu__container js-menu-container" id="menu-container" data-menu >
+            <button
+              type="button"
+              class="menu__button--close js-close-menu"
+              aria-expanded="true"
+              aria-controls="menu-container"
+              data-menu-button
+            >
+              <svg width="40" height="40" aria-label="Кнопка закриття мобільного меню">
+                <use class="menu__icon--cross" href="./images/icons.svg#icon-cross"></use>
+              </svg>
+            </button>
+            <nav class="menu-nav">
+              <div class="menu-nav__thumb">
+                <ul class="menu-nav__list">
+                  <li class="menu-nav__item">
+                    <a href="/" class="menu-nav__link menu-nav__link--current">Студія</a>
+                  </li>
+                  <li class="menu-nav__item">
+                    <a href="./portfolio.html" class="menu-nav__link">Портфоліо</a>
+                  </li>
+                  <li class="menu-nav__item"><a href="" class="menu-nav__link">Контакти</a></li>
+                </ul>
+              </div>
+            </nav>
+            <div class="menu-contacts">
+              <ul class="menu-contacts__list">
+                <li class="menu-contacts__item">
+                  <a href="tel:+380961111111" class="menu-contacts__link--phone">+38 096 111 11 11</a>                
+                </li>
+                <li class="menu-contacts__item">
+                  <a href="mailto:info@devstudio.com" class="menu-contacts__link--mail">info@devstudio.com</a>
+                </li>
+              </ul>
+            </div>
+            <div class="menu-social">
+              <ul class="menu-social">
+                <li class="menu-social__items">
+                  <a href="#" class="menu-social__link">Instagram</a>
+                </li>
+                <li class="menu-social__items">
+                  <a href="#" class="menu-social__link">Twitter</a>
+                </li>
+                <li class="menu-social__items">
+                  <a href="#" class="menu-social__link">Facebook</a>
+                </li>
+                <li class="menu-social__items">
+                  <a href="#" class="menu-social__link">LinkedIn</a>
+                </li>
+              </ul>
+            </div>            
+          </div>
+        </div>
       </div>
     </header>
     <!-- Main content-->
@@ -181,6 +189,29 @@
           <ul class="works">
             <li class="works__item">
               <a href="" class="works__link">
+                <!-- <picture>
+                  <source
+                    spcset="
+                    ./images/picture-img-desk-1x.jpeg 1x, 
+                    ./images/picture-img-desk-2x.jpeg 2x
+                    "
+                    media="min-width:1200px"
+                  />
+                  <source
+                    spcset="
+                    ./images/picture-img-tab-1x.jpeg 1x, 
+                    ./images/picture-img-tab-2x.jpeg 2x
+                    "
+                    media="min-width:768px"
+                  />
+                  <source
+                    spcset="
+                    ./images/picture-img-mob-1x.jpeg 1x, 
+                    ./images/picture-img-mob-2x.jpeg 2x
+                    "
+                    media="max-width:767px"
+                  />
+                </picture> -->
                 <img src="./images/picture1.jpg" alt="Десктопні додатки" width="370" height="294" />
                 <div class="works__description">
                   <h3 class="works__title">Десктопні додатки</h3>
