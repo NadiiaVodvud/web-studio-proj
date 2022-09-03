@@ -11,7 +11,7 @@
   background-position: center;
   text-align: center;
 
-  @media screen and (min-width: 1200px) {
+  @include desktop {
     width: 1600px;
     height: 600px;
     padding: 200px 0;

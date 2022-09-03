@@ -19,16 +19,17 @@
   </head>
 
   <body>
-    <header class="page-header blok">
+    <header class="page-header">
       <div class="container container__page-header--box">
         <nav class="navigation">
           <a class="logo" href="/">Web<span class="logo__black">Studio</span></a>
+          <!-- Tablet and desktop -->
           <ul class="site-nav">
             <li class="site-nav__item">
-              <a href="./index.html" class="site-nav__link">Студія</a>
+              <a href="/" class="site-nav__link site-nav__link">Студія</a>
             </li>
             <li class="site-nav__item">
-              <a href="/" class="site-nav__link site-nav__link--current">Портфоліо</a>
+              <a href="./portfolio.html" class="site-nav__link--current">Портфоліо</a>
             </li>
             <li class="site-nav__item"><a href="" class="site-nav__link">Контакти</a></li>
           </ul>
@@ -50,6 +51,71 @@
             >
           </li>
         </ul>
+        <div class="menu">
+          <button
+            type="button"
+            class="menu__button--open js-open-menu"
+            aria-expanded="false"
+            aria-controls="menu-container"
+            data-menu-button
+          >
+            <svg width="40" height="40" aria-label="Кнопка відкриття меню">
+              <use class="menu__icon--menu" href="./images/icons.svg#icon-menu"></use>
+            </svg>
+          </button>
+          <div class="menu__container js-menu-container" id="menu-container" data-menu >
+            <button
+              type="button"
+              class="menu__button--close js-close-menu"
+              aria-expanded="true"
+              aria-controls="menu-container"
+              data-menu-button
+            >
+              <svg width="40" height="40" aria-label="Кнопка закриття мобільного меню">
+                <use class="menu__icon--cross" href="./images/icons.svg#icon-cross"></use>
+              </svg>
+            </button>
+            <nav class="menu-nav">
+              <div class="menu-nav__thumb">
+                <ul class="menu-nav__list">
+                  <li class="menu-nav__item">
+                    <a href="/" class="menu-nav__link menu-nav__link">Студія</a>
+                  </li>
+                  <li class="menu-nav__item">
+                    <a href="./portfolio.html" class="menu-nav__link--current">Портфоліо</a>
+                  </li>
+                  <li class="menu-nav__item"><a href="" class="menu-nav__link">Контакти</a></li>
+                </ul>
+              </div>
+            </nav>
+            <div class="menu-contacts">
+              <ul class="menu-contacts__list">
+                <li class="menu-contacts__item">
+                  <a href="tel:+380961111111" class="menu-contacts__link--phone">+38 096 111 11 11</a>                
+                </li>
+                <li class="menu-contacts__item">
+                  <a href="mailto:info@devstudio.com" class="menu-contacts__link--mail">info@devstudio.com</a>
+                </li>
+              </ul>
+            </div>
+            <div class="menu-social">
+              <ul class="menu-social__list">
+                <li class="menu-social__items">
+                  <a href="#" class="menu-social__link">Instagram</a>
+                </li>
+                <li class="menu-social__items">
+                  <a href="#" class="menu-social__link">Twitter</a>
+                </li>
+                <li class="menu-social__items">
+                  <a href="#" class="menu-social__link">Facebook</a>
+                </li>
+                <li class="menu-social__items">
+                  <a href="#" class="menu-social__link">LinkedIn</a>
+                </li>
+              </ul>
+            </div>            
+          </div>
+        </div>
       </div>
     </header>
     <!-- Main content-->
@@ -80,12 +146,32 @@
             <li class="progects__elements">
               <a href="" class="progects__link">
                 <div class="photo__wrap">
-                  <img
-                    src="./images/photo1.jpg"
-                    alt="Команда розробників"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      spcset="
+                      ./images/photo1-desk-1x.jpg 1x, 
+                      ./images/photo1-desk-1x.jpg 2x"
+                      media="(min-width:1200px)"
+                    />
+                    <source
+                      spcset="
+                      ./images/photo1-tab-1x.jpg 1x, 
+                      ./images/photo1-tab-1x.jpg 2x"
+                      media="(min-width:768px)"
+                    />
+                    <source
+                      spcset="
+                      ./images/photo1-mob-1x.jpg 1x, 
+                      ./images/photo1-mob-1x.jpg 2x"
+                      media="(max-width:767px)"
+                    />
+                    <img
+                      src="./images/photo1.jpg"
+                      alt="Команда розробників"
+                      width="370"
+                      height="294"
+                    />
+                  </picture>
                   <div class="progects__text--wrap">
                     <p class="progects__text">
                       Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
@@ -103,12 +189,32 @@
             <li class="progects__elements">
               <a href="" class="progects__link">
                 <div class="photo__wrap">
-                  <img
-                    src="./images/photo2.jpg"
-                    alt="Баскетболісти з м'ячем"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      spcset="
+                      ./images/photo2-desk-1x.jpg 1x, 
+                      ./images/photo2-desk-1x.jpg 2x"
+                      media="(min-width:1200px)"
+                    />
+                    <source
+                      spcset="
+                      ./images/photo2-tab-1x.jpg 1x, 
+                      ./images/photo2-tab-1x.jpg 2x"
+                      media="(min-width:768px)"
+                    />
+                    <source
+                      spcset="
+                      ./images/photo2-mob-1x.jpg 1x, 
+                      ./images/photo2-mob-1x.jpg 2x"
+                      media="(max-width:767px)"
+                    />
+                    <img
+                      src="./images/photo2.jpg"
+                      alt="Баскетболісти з м'ячем"
+                      width="370"
+                      height="294"
+                    />
+                  </picture>
                   <div class="progects__text--wrap">
                     <p class="progects__text">
                       Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
@@ -126,7 +232,32 @@
             <li class="progects__elements">
               <a href="" class="progects__link">
                 <div class="photo__wrap">
-                  <img src="./images/photo3.jpg" alt="Логотип ресторану" width="370" height="294" />
+                  <picture>
+                    <source
+                      spcset="
+                      ./images/photo3-desk-1x.jpg 1x, 
+                      ./images/photo3-desk-1x.jpg 2x"
+                      media="(min-width:1200px)"
+                    />
+                    <source
+                      spcset="
+                      ./images/photo3-tab-1x.jpg 1x, 
+                      ./images/photo3-tab-1x.jpg 2x"
+                      media="(min-width:768px)"
+                    />
+                    <source
+                      spcset="
+                      ./images/photo3-mob-1x.jpg 1x, 
+                      ./images/photo3-mob-1x.jpg 2x"
+                      media="(max-width:767px)"
+                    />
+                    <img
+                      src="./images/photo3.jpg"
+                      alt="Логотип ресторану"
+                      width="370"
+                      height="294"
+                    />
+                  </picture>
                   <div class="progects__text--wrap">
                     <p class="progects__text">
                       Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
@@ -144,12 +275,32 @@
             <li class="progects__elements">
               <a href="" class="progects__link">
                 <div class="photo__wrap">
-                  <img
-                    src="./images/photo4.jpg"
-                    alt="Великі чорні навушники"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      spcset="
+                      ./images/photo4-desk-1x.jpg 1x, 
+                      ./images/photo4-desk-1x.jpg 2x"
+                      media="(min-width:1200px)"
+                    />
+                    <source
+                      spcset="
+                      ./images/photo4-tab-1x.jpg 1x, 
+                      ./images/photo4-tab-1x.jpg 2x"
+                      media="(min-width:768px)"
+                    />
+                    <source
+                      spcset="
+                      ./images/photo4-mob-1x.jpg 1x, 
+                      ./images/photo4-mob-1x.jpg 2x"
+                      media="(max-width:767px)"
+                    />
+                    <img
+                      src="./images/photo4.jpg"
+                      alt="Великі чорні навушники"
+                      width="370"
+                      height="294"
+                    />
+                  </picture>
                   <div class="progects__text--wrap">
                     <p class="progects__text">
                       Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
@@ -167,7 +318,32 @@
             <li class="progects__elements">
               <a href="" class="progects__link">
                 <div class="photo__wrap">
-                  <img src="./images/photo5.jpg" alt="Дві коробки" width="370" height="294" />
+                  <picture>
+                    <source
+                      spcset="
+                      ./images/photo5-desk-1x.jpg 1x, 
+                      ./images/photo5-desk-1x.jpg 2x"
+                      media="(min-width:1200px)"
+                    />
+                    <source
+                      spcset="
+                      ./images/photo5-tab-1x.jpg 1x, 
+                      ./images/photo5-tab-1x.jpg 2x"
+                      media="(min-width:768px)"
+                    />
+                    <source
+                      spcset="
+                      ./images/photo5-mob-1x.jpg 1x, 
+                      ./images/photo5-mob-1x.jpg 2x"
+                      media="(max-width:767px)"
+                    />
+                    <img
+                      src="./images/photo5.jpg"
+                      alt="Дві коробки"
+                      width="370"
+                      height="294"
+                    />
+                  </picture>
                   <div class="progects__text--wrap">
                     <p class="progects__text">
                       Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
@@ -185,12 +361,32 @@
             <li class="progects__elements">
               <a href="" class="progects__link">
                 <div class="photo__wrap">
-                  <img
-                    src="./images/photo6.jpg"
-                    alt="Монітор з дизайном сторінки"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      spcset="
+                      ./images/photo6-desk-1x.jpg 1x, 
+                      ./images/photo6-desk-1x.jpg 2x"
+                      media="(min-width:1200px)"
+                    />
+                    <source
+                      spcset="
+                      ./images/photo6-tab-1x.jpg 1x, 
+                      ./images/photo6-tab-1x.jpg 2x"
+                      media="(min-width:768px)"
+                    />
+                    <source
+                      spcset="
+                      ./images/photo6-mob-1x.jpg 1x, 
+                      ./images/photo6-mob-1x.jpg 2x"
+                      media="(max-width:767px)"
+                    />
+                    <img
+                      src="./images/photo6.jpg"
+                      alt="Монітор з дизайном сторінки"
+                      width="370"
+                      height="294"
+                    />
+                  </picture>
                   <div class="progects__text--wrap">
                     <p class="progects__text">
                       Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
@@ -208,7 +404,32 @@
             <li class="progects__elements">
               <a href="" class="progects__link">
                 <div class="photo__wrap">
-                  <img src="./images/photo7.jpg" alt="Відкритий журнал" width="370" height="294" />
+                  <picture>
+                    <source
+                      spcset="
+                      ./images/photo7-desk-1x.jpg 1x, 
+                      ./images/photo7-desk-1x.jpg 2x"
+                      media="(min-width:1200px)"
+                    />
+                    <source
+                      spcset="
+                      ./images/photo7-tab-1x.jpg 1x, 
+                      ./images/photo7-tab-1x.jpg 2x"
+                      media="(min-width:768px)"
+                    />
+                    <source
+                      spcset="
+                      ./images/photo7-mob-1x.jpg 1x, 
+                      ./images/photo7-mob-1x.jpg 2x"
+                      media="(max-width:767px)"
+                    />
+                    <img
+                      src="./images/photo7.jpg"
+                      alt="Відкритий журнал"
+                      width="370"
+                      height="294"
+                    />
+                  </picture>
                   <div class="progects__text--wrap">
                     <p class="progects__text">
                       Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
@@ -226,7 +447,32 @@
             <li class="progects__elements">
               <a href="" class="progects__link">
                 <div class="photo__wrap">
-                  <img src="./images/photo8.jpg" alt="Бірка як логотип" width="370" height="294" />
+                  <picture>
+                    <source
+                      spcset="
+                      ./images/photo8-desk-1x.jpg 1x, 
+                      ./images/photo8-desk-1x.jpg 2x"
+                      media="(min-width:1200px)"
+                    />
+                    <source
+                      spcset="
+                      ./images/photo8-tab-1x.jpg 1x, 
+                      ./images/photo8-tab-1x.jpg 2x"
+                      media="(min-width:768px)"
+                    />
+                    <source
+                      spcset="
+                      ./images/photo8-mob-1x.jpg 1x, 
+                      ./images/photo8-mob-1x.jpg 2x"
+                      media="(max-width:767px)"
+                    />
+                    <img
+                      src="./images/photo8.jpg"
+                      alt="Бірка як логотип"
+                      width="370"
+                      height="294"
+                    />
+                  </picture>
                   <div class="progects__text--wrap">
                     <p class="progects__text">
                       Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
@@ -244,12 +490,32 @@
             <li class="progects__elements">
               <a href="" class="progects__link">
                 <div class="photo__wrap">
-                  <img
-                    src="./images/photo9.jpg"
-                    alt="Реклама на ноутбуці"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      spcset="
+                      ./images/photo9-desk-1x.jpg 1x, 
+                      ./images/photo9-desk-1x.jpg 2x"
+                      media="(min-width:1200px)"
+                    />
+                    <source
+                      spcset="
+                      ./images/photo9-tab-1x.jpg 1x, 
+                      ./images/photo9-tab-1x.jpg 2x"
+                      media="(min-width:768px)"
+                    />
+                    <source
+                      spcset="
+                      ./images/photo9-mob-1x.jpg 1x, 
+                      ./images/photo9-mob-1x.jpg 2x"
+                      media="(max-width:767px)"
+                    />
+                    <img
+                      src="./images/photo9.jpg"
+                      alt="Реклама на ноутбуці"
+                      width="370"
+                      height="294"
+                    />
+                  </picture>
                   <div class="progects__text--wrap">
                     <p class="progects__text">
                       Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
@@ -340,5 +606,6 @@
         </form>
       </div>
     </footer>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>
