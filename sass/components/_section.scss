@@ -1,14 +1,14 @@
 .section {
   padding-top: 60px;
   padding-bottom: 60px;
-  @media screen and (min-width: 1200px) {
+  @include desktop {
     padding-top: 94px;
     padding-bottom: 94px;
   }
   &--no-top-padding {
     padding-top: 0;
     display: none;
-    @media screen and (min-width: 1200px) {
+    @include desktop {
       display: block;
     }
   }
@@ -24,7 +24,7 @@
   line-height: 1.17;
   text-align: center;
   letter-spacing: 0.03em;
-  @media screen and (min-width: 1200px) {
+  @include desktop {
     margin: 0 0 50px 0;
     font-size: 36px;
   }

@@ -62,40 +62,4 @@
 .buttons__item:not(:last-child) {
   margin-right: 8px;
 }
-// .button--menu {
-//   display: inline-flex;
-//   margin: 0;
-//   padding: 0;
-//   border: none;
-//   background-color: transparent;
-//   & is-open .button__icon--menu {
-//     display: none;
-//   }
-// }
-// .button__icon--cross {
-//   display: none;
-//   .button--menu .is-open & {
-//     display: block;
-//   }
-// }
-
-// .menu-container {
-//   display: none;
-//   position: absolute;
-//   top: 100%;
-//   left: 0;
-//   width: 100%;
-//   background-color: var(--accent-color);
-//   padding: 10px;
-//   text-align: center;
-//   font-size: 20px;
-//   & .is-open[
-//     display: block;
-//   ]
-// }
-
-// .page-header {
-//   position: relative;
-// }.
-
 

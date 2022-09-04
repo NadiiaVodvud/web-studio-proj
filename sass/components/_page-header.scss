@@ -1,15 +1,16 @@
 .page-header {
-  position: relative;
   border-bottom: 1px solid rgba(75, 75, 75, 0.1);
 }
 .container__page-header--box {
   display: flex;
   width: 100%;
-@include desktop{
-  flex-direction: row;
-  flex-wrap: nowrap;
+  @include tablet{
   align-items: center;
   justify-content: center;
+  }
+  @include desktop{
+  flex-direction: row;
+  flex-wrap: nowrap;
 }
 }
 .navigation {

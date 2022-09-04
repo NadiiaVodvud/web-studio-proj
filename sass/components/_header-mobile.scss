@@ -5,6 +5,7 @@
   }
 }
 .menu__container {
+  position: relative;
   display: none;
   position: fixed;
   margin-bottom: auto;
@@ -105,7 +106,8 @@
   }
 }
 .menu-social__items{
-display: flex;
+  display: flex;
+  position: relative;
 }
 .menu-social__items:not(:last-child){
   margin-right: 20px;
@@ -113,9 +115,11 @@ display: flex;
 .menu-social__items:not(:last-child)::after{
   content: " ";
   display: block;
+  position: absolute;
+  top: 22px;
+  right: -10px;
   width: 1px;
   height: 100%;
-  margin-left: 10px;
   background-color: rgba(33,33,33,.2);
   transform: translateY(-100%);
 }

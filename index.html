@@ -203,21 +203,21 @@
                   type="image/webp"
                 /> -->
                 <!-- <source
-                    spcset="
+                    srcset="
                     ./images/picture-img-desk-1x.jpeg 1x, 
                     ./images/picture-img-desk-2x.jpeg 2x
                     "
                     media="min-width:1200px"
                   />
                   <source
-                    spcset="
+                    srcset="
                     ./images/picture-img-tab-1x.jpeg 1x, 
                     ./images/picture-img-tab-2x.jpeg 2x
                     "
                     media="min-width:768px"
                   />
                   <source
-                    spcset="
+                    srcset="
                     ./images/picture-img-mob-1x.jpeg 1x, 
                     ./images/picture-img-mob-2x.jpeg 2x
                     "
@@ -226,8 +226,9 @@
                 </picture> -->
                 <picture>
                   <source
-                    srcset="./images/picture1-desk-1x.jpg 1x, ./images/picture1-desk-2x.jpg 2x"
-                    media="(min-width:1200px)"
+                  srcset="./images/picture1-desk-1x.jpg 1x, 
+                  ./images/picture1-desk-2x.jpg 2x"
+                   media="(min-width:1200px)"
                   />
                   <img
                     src="./images/picture1.jpg"
@@ -290,19 +291,19 @@
             <li class="team__item">
               <picture>
                 <source
-                  spcset="
+                  srcset="
                   ./images/image1-desk-1x.jpg 1x, 
                   ./images/image1-desk-2x.jpg 2x"
                   media="(min-width:1200px)"
                 />
                 <source
-                  spcset="
+                  srcset="
                   ./images/image1-tab-1x.jpg 1x, 
                   ./images/image1-tab-2x.jpg 2x"
                   media="(min-width:768px)"
                 />
                 <source
-                  spcset="
+                  srcset="
                   ./images/image1-mob-1x.jpg 1x, 
                   ./images/image1-mob-2x.jpg 2x"
                   media="(max-width:767px)"
@@ -348,19 +349,19 @@
             <li class="team__item">
               <picture>
                 <source
-                  spcset="
+                  srcset="
                   ./images/image2-desk-1x.jpg 1x, 
                   ./images/image2-desk-2x.jpg 2x"
                   media="(min-width:1200px)"
                 />
                 <source
-                  spcset="
+                  srcset="
                   ./images/image2-tab-1x.jpg 1x, 
                   ./images/image2-tab-2x.jpg 2x"
                   media="(min-width:768px)"
                 />
                 <source
-                  spcset="
+                  srcset="
                   ./images/image2-mob-1x.jpg 1x, 
                   ./images/image2-mob-2x.jpg 2x"
                   media="(max-width:767px)"
@@ -406,19 +407,19 @@
             <li class="team__item">
               <picture>
                 <source
-                  spcset="
+                  srcset="
                   ./images/image3-desk-1x.jpg 1x, 
                   ./images/image3-desk-2x.jpg 2x"
                   media="(min-width:1200px)"
                 />
                 <source
-                  spcset="
+                  srcset="
                   ./images/image3-tab-1x.jpg 1x, 
                   ./images/image3-tab-2x.jpg 2x"
                   media="(min-width:768px)"
                 />
                 <source
-                  spcset="
+                  srcset="
                   ./images/image3-mob-1x.jpg 1x, 
                   ./images/image3-mob-2x.jpg 2x"
                   media="(max-width:767px)"
@@ -464,19 +465,19 @@
             <li class="team__item">
               <picture>
                 <source
-                  spcset="
+                  srcset="
                   ./images/image4-desk-1x.jpg 1x, 
                   ./images/image4-desk-2x.jpg 2x"
                   media="(min-width:1200px)"
                 />
                 <source
-                  spcset="
+                  srcset="
                   ./images/image4-tab-1x.jpg 1x,
                   ./images/image4-tab-2x.jpg 2x"
                   media="(min-width:768px)"
                 />
                 <source
-                  spcset="
+                  srcset="
                   ./images/image4-mob-1x.jpg 1x, 
                   ./images/image4-mob-2x.jpg 2x"
                   media="(max-width:767px)"
@@ -642,7 +643,9 @@
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button class="close__button" data-modal-close>
-          <img src="./images/vector.svg" alt="x" width="11" height="11" />
+          <svg class="close__button--icon" width="18" height="18">
+                <use href="./images/icons.svg#icon-close-x"></use>
+              </svg>
         </button>
         <p class="modal__title">Залиште свої дані, ми вам передзвонимо</p>
         <form actin="" autocomplete="off">
