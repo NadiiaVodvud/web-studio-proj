@@ -1281,7 +1281,8 @@ img {
   overflow: auto;
 }
 
-.solution {
+.projects__title--wrap {
+  flex-grow: 1;
   padding: 20px 24px;
   background: #ffffff;
   border: 1px solid #eeeeee;
