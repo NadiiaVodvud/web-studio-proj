@@ -11,19 +11,16 @@
   @include tablet {
     flex-direction: row;
     flex-wrap: wrap; 
-    align-items: flex-start;
-    justify-content: center;
+    align-items: baseline;
+    justify-content: space-around;
   }
   @include desktop {
+    text-align: left;
    align-items: baseline;
   }
 
 }
 .information {
-  margin-bottom: 60px;
-   @include tablet{
-    margin-right: 165px;
-   }
    @include desktop {
     width: 231px;
     height: 132px;
@@ -53,9 +50,6 @@
 }
 /* Join */
 .join{
-  @media screen and (max-width: 1199px) {
-    margin-bottom: 60px;
-  }
    @include tablet {
     justify-content: center;
    }
@@ -97,9 +91,13 @@
 }
 
 .mailing__form {
+  @include tablet{
+    margin-top: 60px;
+  }
   @include desktop {
   width: 570px;
   height: 86px;
+  margin-top: 0;
   margin-left: 93px;
 }
 }
