@@ -579,21 +579,10 @@ img {
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   background-color: rgba(0, 0, 0, 0.1254901961);
   overflow-y: scroll;
-  padding: 93px, 15px, 94px;
-}
-@media screen and (min-width: 768px) {
-  .backdrop {
-    padding: 208px, 159px, 207px;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .backdrop {
-    padding: 0;
-  }
 }
 
 .backdrop.is-hidden {
@@ -614,20 +603,13 @@ img {
   max-width: 450px;
   max-height: 609px;
   position: absolute;
-  top: 92px;
-  left: 3%;
-}
-@media screen and (min-width: 768px) {
-  .modal {
-    left: 20%;
-  }
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 @media screen and (min-width: 1200px) {
   .modal {
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(1);
-    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
     min-width: 528px;
     min-height: 581px;
   }
