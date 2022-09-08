@@ -11,7 +11,7 @@
     flex-direction: row;
     align-items: center;
     margin-left: auto;
-  }
+}
 }
 }
 .contacts__item:not(:last-child){
@@ -20,6 +20,7 @@
   }
   @include desktop{
     margin-bottom: 0;
+    margin-right: 30px;
   }
 }
 .contacts__link {
@@ -38,8 +39,6 @@
   }@include desktop {
     font-size: 14px;
     line-height: 1.14;  
-    padding-bottom: 32px 0;
-      margin-left: 30px;
   } 
 }
 

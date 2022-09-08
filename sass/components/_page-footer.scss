@@ -8,7 +8,9 @@
   flex-direction: column;
   text-align: center;
   align-items: center;
+  gap: 60px;
   @include tablet {
+    gap: 0;
     flex-direction: row;
     flex-wrap: wrap; 
     align-items: baseline;
@@ -16,7 +18,7 @@
   }
   @include desktop {
     text-align: left;
-   align-items: baseline;
+    align-items: baseline;
   }
 
 }
